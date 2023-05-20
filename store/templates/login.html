@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container" style="background-color: #dcdcdc;">
+    <div class="p-3 m-3">
+        <div class="col-lg-5 rounded mx-auto border pt-4">
+            <div class="text-center col">
+            
+                <img
+                src="https://media.istockphoto.com/id/1368151370/photo/user-typing-login-and-password-cyber-security-concept.jpg?b=1&s=170667a&w=0&k=20&c=wm6YUMs03Bup4_9XcQaX61L711qJxAUExEJp_PWO8gI=" alt=""
+                class="" style="height: 150px;">
+            <hr>
+            </div>
+            <h3 class="alert alert-light rounded-pill" style="text-align:center; background-color: #3c3c3c;" >Login</h3>
+            <form action="/login" method="POST">
+                
+                {% csrf_token %}
+
+                {% if error%}
+                <div class="alert alert-danger" role="alert">
+                    {{error}}
+                </div>
+                {% endif %}
+                <!-- email -->
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input required type="email" name="email" id=""
+                    value="{{values.email}}" 
+                    class=" form-control-sm form-control" placeholder="user123@gmail.com">
+                </div>
+
+
+                <!-- password -->
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" 
+                    name="password" 
+                    id=""
+                     class="form-control form-control-sm" >
+                </div>
+
+                <!--Checkme button-->
+            
+                <hr>
+                <button type="submit" class="btn btn-sm btn-success col-lg-12" style="background-color: #000000;">Login</button>
+
+
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
