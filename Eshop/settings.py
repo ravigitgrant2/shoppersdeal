@@ -25,7 +25,7 @@ SECRET_KEY = '-95t%=#4o3@l-(-%ok9*h%n3!0(sdchjn%+_$5#umaj-!3bg*7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','tranquil-inlet-81388.herokuapp.com']
+ALLOWED_HOSTS = ['*','tranquilinlet81388.herokuapp.com']
 
 
 # Application definition
